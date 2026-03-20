@@ -1,0 +1,22 @@
+{
+  "name": "datadog-observability",
+  "description": "Query and analyze Datadog observability data directly from Claude Code via REST API calls. Includes log search, metrics queries, monitors, events, host infrastructure, and incident investigation workflows.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ivlad003"
+  },
+  "homepage": "https://github.com/ivlad003/plugins",
+  "repository": "https://github.com/ivlad003/plugins",
+  "license": "MIT",
+  "keywords": [
+    "datadog",
+    "observability",
+    "monitoring",
+    "logs",
+    "metrics",
+    "monitors",
+    "apm",
+    "incidents",
+    "infrastructure"
+  ]
+}

@@ -40,6 +40,37 @@ Query and analyze New Relic data directly from Claude Code via REST API calls. N
 /nr-investigate checkout is returning 500s
 ```
 
+### datadog-observability
+
+Query and analyze Datadog data directly from Claude Code via REST API calls. No MCP server or Python needed.
+
+```bash
+/plugin install datadog-observability@ivlad-plugins
+```
+
+**Prerequisites:** Set `DD_API_KEY` and `DD_APP_KEY` environment variables. Optionally set `DD_SITE` (defaults to `datadoghq.com`).
+
+**Includes:**
+
+| Component | Description |
+|-----------|-------------|
+| `/dd-logs <query>` | Search and filter logs |
+| `/dd-query <metric>` | Run a metrics query |
+| `/dd-alerts` | Check triggered monitors |
+| `/dd-status` | Health overview of infrastructure |
+| `/dd-investigate` | Full incident investigation with root cause analysis |
+| `datadog-ops` skill | 12 API operations + 3 investigation workflows |
+| `datadog-investigator` agent | Correlates signals for incident root cause analysis |
+
+**Usage:**
+```
+"Search logs for errors in the payment service"
+"What monitors are triggered?"
+/dd-status
+/dd-logs service:checkout status:error
+/dd-investigate the checkout service is returning 500s
+```
+
 ## License
 
 MIT
